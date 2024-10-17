@@ -270,7 +270,7 @@ c.ServerProxy.servers = {{
             'title': '{args.launcher_entry_title}',
             'icon_path': '{code_server_install_loc}/icon.svg'
         }},
-        'command': ['{code_server_install_loc}/bin/code-server', '--auth', 'none', '--disable-telemetry', '--bind-addr', '127.0.0.1:{{port}}', '--open', '{persistent_volume_path}/'],
+        'command': ['{code_server_install_loc}/bin/code-server', '--auth', 'none', '--disable-telemetry', '--bind-addr', '127.0.0.1:8080', '--open', '{persistent_volume_path}/'],
         'environment': {{
             'XDG_DATA_HOME': '{xdg_data_home}',
             'XDG_CONFIG_HOME': '{xdg_config_home}',
