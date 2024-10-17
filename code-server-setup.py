@@ -261,6 +261,8 @@ def configure_jupyter(args: argparse.Namespace):
         with open(jupyter_config_file, "a", encoding="utf-8") as config_file:
             config_file.write(
                 f"""
+c.NotebookApp.shutdown_no_activity_timeout = 3600  # 1 hour
+c.ServerApp.iopub_data_timeout = 3600  # 1 hour
 c.ServerProxy.servers = {{
     '{proxy_path}': {{
         'launcher_entry': {{
@@ -278,6 +280,9 @@ c.ServerProxy.servers = {{
         'timeout': 30
     }}
 }}
+# Additional settings for Jupyter server
+c.NotebookApp.keep_alive = True
+c.NotebookApp.connection_timeout = 60000  # 60 seconds
 """
             )
     jupyter_lab_version = subprocess.check_output(
