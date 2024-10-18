@@ -277,7 +277,7 @@ c.ServerProxy.servers = {{
             'SHELL': '{args.shell_executable}'
         }},
         'absolute_url': False,
-        'timeout': 30
+        'timeout': 60
     }}
 }}
 # Additional settings for Jupyter server
