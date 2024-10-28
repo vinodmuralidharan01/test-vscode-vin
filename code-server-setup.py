@@ -300,6 +300,7 @@ c.MappingKernelManager.cull_interval = 300
 
     conda_setup_commands = [
         ["pip", "uninstall", "--yes", "nbserverproxy", ";"],
+        ["jupyter", "serverextension", "disable", "nbserverproxy"],
         [
             "pip",
             "install",
